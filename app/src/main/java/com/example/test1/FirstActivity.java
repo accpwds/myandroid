@@ -189,25 +189,25 @@ public class FirstActivity extends BaseActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Log.d(TAG,"onDestroy");
+        Log.d(TAG,"onDestroy 活动在被销毁之前调用");
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        Log.d(TAG,"onPause");
+        Log.d(TAG,"onPause 在系统准备去启动或者恢复另一个活动的时候调用");
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        Log.d(TAG,"onResume");
+        Log.d(TAG,"onResume 活动准备好和用户进行交互的时候调用，此时活动一定位于返回栈的栈顶，并且处理运行状态。");
     }
 
     @Override
     protected void onRestart() {
         super.onRestart();
-        Log.d(TAG,"onRestart");
+        Log.d(TAG,"onRestart 活动由停止状态变为运行状态之前调用，也就是活动被重新启用了");
     }
 
     //临时数据保存
