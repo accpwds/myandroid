@@ -18,25 +18,30 @@ import android.util.Log;
 
 public class BaseActivity extends AppCompatActivity {
 
+    private static final String TAG="BaseActivity";
+
     //定义强制下线广播
     private ForceOfflineReceiver receiver;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.d("BaseActivity",getClass().getSimpleName());
+        Log.d(TAG, "添加Activity " + getClass().getSimpleName());
         ActivityCollector.addActivity(this);
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        Log.d(TAG,"执行 onDestroy");
         ActivityCollector.removeActivity(this);
+        Log.d(TAG,"清除所有Activity");
     }
 
     @Override
     protected void onResume() {
         super.onResume();
+        Log.d(TAG,"执行 onResume");
         IntentFilter intentFilter = new IntentFilter();
         intentFilter.addAction("com.example.test1.FORCE_OFFLINE");
         receiver = new ForceOfflineReceiver();
@@ -46,6 +51,7 @@ public class BaseActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
+        Log.d(TAG,"执行 onPause");
         if (receiver != null){
             unregisterReceiver(receiver);
             receiver = null;

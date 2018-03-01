@@ -27,6 +27,8 @@ public class LoginActivity extends BaseActivity {
         setContentView(R.layout.activity_login);
         account = (EditText) findViewById(R.id.account);
         password = (EditText) findViewById(R.id.password);
+        account.setText("admin");
+        password.setText("123456");
         login = (Button) findViewById(R.id.sign_in);
         login.setOnClickListener(new View.OnClickListener() {
             @Override

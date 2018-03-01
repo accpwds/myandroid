@@ -156,6 +156,16 @@ public class FirstActivity extends BaseActivity {
                 sendBroadcast(intent);
             }
         });
+
+        Button button10 = (Button) findViewById(R.id.button10);
+        button10.setText("文件存储数据");
+        button10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(FirstActivity.this,SaveFileActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
 
