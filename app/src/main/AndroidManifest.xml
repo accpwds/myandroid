@@ -26,7 +26,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".FirstActivity"></activity>
+        <activity android:name=".FirstActivity" />
         <activity android:name=".MainActivity">
 
             <!-- <intent-filter> -->
@@ -78,7 +78,8 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name=".SaveFileActivity"></activity>
+        <activity android:name=".SaveFileActivity" />
+        <activity android:name=".SharedPreferencesActivity"></activity>
     </application>
 
 </manifest>

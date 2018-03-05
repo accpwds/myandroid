@@ -166,6 +166,16 @@ public class FirstActivity extends BaseActivity {
                 startActivity(intent);
             }
         });
+
+        Button button11 = (Button) findViewById(R.id.button11);
+        button11.setText("SharedPreferences存储数据");
+        button11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(FirstActivity.this,SharedPreferencesActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
 

@@ -26,6 +26,7 @@ public class BaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.d(TAG,"执行 onCreate");
         Log.d(TAG, "添加Activity " + getClass().getSimpleName());
         ActivityCollector.addActivity(this);
     }

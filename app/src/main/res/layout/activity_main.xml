@@ -5,8 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.example.test1.MainActivity">
+    android:orientation="vertical">
 
     <TextView
         android:layout_width="wrap_content"
@@ -23,6 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Button"
+        android:textAllCaps="false"
         tools:layout_editor_absoluteX="135dp"
         tools:layout_editor_absoluteY="16dp" />
 
@@ -33,5 +33,27 @@
         android:text="发送本地广播"
         tools:layout_editor_absoluteX="135dp"
         tools:layout_editor_absoluteY="16dp" />
+
+    <Button
+        android:id="@+id/save_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save data"
+        android:textAllCaps="false"
+        tools:layout_editor_absoluteX="135dp"
+        tools:layout_editor_absoluteY="16dp"/>
+
+    <Button
+        android:id="@+id/restore_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="Restore data" />
+
+    <TextView
+        android:id="@+id/restore_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         />
 
 </LinearLayout>
