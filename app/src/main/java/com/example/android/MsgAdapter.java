@@ -1,4 +1,4 @@
-package com.example.test1;
+package com.example.android;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.test1.object.Msg;
+import com.example.android.object.Msg;
 
 import java.util.List;
 

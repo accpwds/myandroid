@@ -1,2 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<litepal>
+    <dbname value="BookStore"></dbname>
+    <version value="1"></version>
+    <list></list>
+</litepal>

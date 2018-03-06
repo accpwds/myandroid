@@ -1,10 +1,10 @@
-package com.example.test1;
+package com.example.android;
 
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
-import com.example.test1.object.Fruit;
+import com.example.android.object.Fruit;
 
 import java.util.ArrayList;
 import java.util.List;

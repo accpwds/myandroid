@@ -1,4 +1,4 @@
-package com.example.test1;
+package com.example.android;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,7 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.test1.object.Fruit;
+import com.example.android.object.Fruit;
 
 import java.util.List;
 

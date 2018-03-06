@@ -1,4 +1,4 @@
-package com.example.test1;
+package com.example.android;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -7,7 +7,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.example.test1.object.Fruit;
+import com.example.android.object.Fruit;
 
 import java.util.ArrayList;
 import java.util.List;
