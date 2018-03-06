@@ -8,6 +8,9 @@ import android.support.v7.app.ActionBar;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
+
+import org.litepal.LitePal;
 
 public class FirstActivity extends BaseActivity {
 
@@ -185,6 +188,16 @@ public class FirstActivity extends BaseActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(FirstActivity.this,SQLiteDatabaseActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        Button button13 = (Button) findViewById(R.id.button13);
+        button13.setText("LitePal创建数据库");
+        button13.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LitePal.getDatabase();
+                Toast.makeText(FirstActivity.this,"create success",Toast.LENGTH_SHORT).show();
             }
         });
     }
