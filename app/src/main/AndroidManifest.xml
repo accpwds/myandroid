@@ -2,12 +2,19 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.android">
 
+    <!-- https://developer.android.google.cn/reference/android/Manifest.permission.html  完整权限表 -->
+
+    <!-- 访问系统网络状态 -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 监听开机广播 -->
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
     <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <!-- 访问手机账户 -->
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <!-- 读取联系人 -->
     <uses-permission android:name="android.permission.READ_PROFILE" />
+    <!-- 读取应用列表 -->
     <uses-permission android:name="android.permission.READ_CONTACTS" />
 
     <application
@@ -53,6 +60,7 @@
             android:label="广播" />
         <activity android:name="com.example.android.LocalBroadcastReceiver" />
         <activity android:name="com.example.android.SQLiteDatabaseActivity"></activity>
+        <activity android:name=".LitePalActivity"></activity>
 
         <!--  -->
         <receiver

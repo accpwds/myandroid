@@ -1,106 +1,157 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!  121231"
-        android:id="@+id/TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        android:textAllCaps="false"
-        tools:layout_editor_absoluteX="135dp"
-        tools:layout_editor_absoluteY="16dp" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="发送本地广播"
-        tools:layout_editor_absoluteX="135dp"
-        tools:layout_editor_absoluteY="16dp" />
-
-    <Button
-        android:id="@+id/save_data"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Save data"
-        android:textAllCaps="false"
-        tools:layout_editor_absoluteX="135dp"
-        tools:layout_editor_absoluteY="16dp"/>
-
-    <Button
-        android:id="@+id/restore_data"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="Restore data" />
-
-    <TextView
-        android:id="@+id/restore_text"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-         />
+        android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/create_database"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="Create database" />
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/add_data"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAllCaps="false"
-            android:text="add" />
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/del_data"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAllCaps="false"
-            android:text="delete" />
+            <TextView
+                android:id="@+id/TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hello World!  121231"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/update_data"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAllCaps="false"
-            android:text="update" />
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Button"
+                android:textAllCaps="false"
+                tools:layout_editor_absoluteX="135dp"
+                tools:layout_editor_absoluteY="16dp" />
 
-        <Button
-            android:id="@+id/select_data"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAllCaps="false"
-            android:text="select" />
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="发送本地广播"
+                tools:layout_editor_absoluteX="135dp"
+                tools:layout_editor_absoluteY="16dp" />
 
-    </LinearLayout>
+            <Button
+                android:id="@+id/save_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save data"
+                android:textAllCaps="false"
+                tools:layout_editor_absoluteX="135dp"
+                tools:layout_editor_absoluteY="16dp" />
 
-    <TextView
-        android:id="@+id/query_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/restore_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Restore data"
+                android:textAllCaps="false" />
+
+            <TextView
+                android:id="@+id/restore_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/create_database"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Create database"
+                android:textAllCaps="false" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/add_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="add"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/del_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="delete"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/update_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="update"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/select_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="select"
+                    android:textAllCaps="false" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/query_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/insert"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAllCaps="false"
+                    android:text="insert" />
+
+                <Button
+                    android:id="@+id/delete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAllCaps="false"
+                    android:text="delete" />
+
+                <Button
+                    android:id="@+id/update"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAllCaps="false"
+                    android:text="update" />
+
+                <Button
+                    android:id="@+id/select"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAllCaps="false"
+                    android:text="select" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/query_text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

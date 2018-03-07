@@ -1,10 +1,12 @@
 package com.example.android.object;
 
+import org.litepal.crud.DataSupport;
+
 /**
  * Created by Administrator on 2018/3/6.
  */
 
-public class Book {
+public class Book extends DataSupport {
 
     private int id;
 

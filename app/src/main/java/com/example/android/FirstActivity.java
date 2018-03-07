@@ -200,6 +200,27 @@ public class FirstActivity extends BaseActivity {
                 Toast.makeText(FirstActivity.this,"create success",Toast.LENGTH_SHORT).show();
             }
         });
+
+        Button button14 = (Button) findViewById(R.id.button14);
+        button14.setText("LitePal_CRUD");
+        button14.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(FirstActivity.this,LitePalActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button button15 = (Button) findViewById(R.id.button15);
+        button15.setText("运行时申请权限");
+        button15.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse("tel:10086"));
+                startActivity(intent);
+            }
+        });
     }
 
 
