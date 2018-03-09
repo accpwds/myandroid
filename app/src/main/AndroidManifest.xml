@@ -4,6 +4,7 @@
 
     <!-- https://developer.android.google.cn/reference/android/Manifest.permission.html  完整权限表 -->
 
+
     <!-- 访问系统网络状态 -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <!-- 监听开机广播 -->
@@ -26,7 +27,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.example.android.LoginActivity"
+            android:name=".LoginActivity"
             android:label="@string/title_activity_login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -34,8 +35,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.android.FirstActivity" />
-        <activity android:name="com.example.android.MainActivity">
+        <activity android:name=".FirstActivity" />
+        <activity android:name=".MainActivity">
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.VIEW" /> -->
@@ -44,27 +45,29 @@
             <!-- </intent-filter> -->
         </activity>
         <activity
-            android:name="com.example.android.FruitActivity"
+            android:name=".FruitActivity"
             android:label="@string/linear" />
         <activity
-            android:name="com.example.android.FruitActivity2"
+            android:name=".FruitActivity2"
             android:label="@string/linear" />
         <activity
-            android:name="com.example.android.FruitActivity3"
+            android:name=".FruitActivity3"
             android:label="@string/staggeredgrid" />
         <activity
-            android:name="com.example.android.MsgActivtiy"
+            android:name=".MsgActivtiy"
             android:label="聊天对话框" />
         <activity
-            android:name="com.example.android.BroadCastActivity"
+            android:name=".BroadCastActivity"
             android:label="广播" />
-        <activity android:name="com.example.android.LocalBroadcastReceiver" />
-        <activity android:name="com.example.android.SQLiteDatabaseActivity"></activity>
-        <activity android:name=".LitePalActivity"></activity>
+        <activity android:name=".LocalBroadcastReceiver" />
+        <activity android:name=".SQLiteDatabaseActivity" />
+        <activity android:name=".LitePalActivity" />
+        <activity android:name=".ContactsActivity" />
+        <activity android:name=".DatabaseProviderActivity"></activity>
 
         <!--  -->
         <receiver
-            android:name="com.example.android.BootCompleteReceiver"
+            android:name=".BootCompleteReceiver"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
@@ -72,7 +75,7 @@
             </intent-filter>
         </receiver>
         <receiver
-            android:name="com.example.android.MyBroadcastReceiver"
+            android:name=".MyBroadcastReceiver"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
@@ -80,7 +83,7 @@
             </intent-filter>
         </receiver>
         <receiver
-            android:name="com.example.android.AnotherBroadcastReceiver"
+            android:name=".AnotherBroadcastReceiver"
             android:enabled="true"
             android:exported="true">
             <intent-filter android:priority="100">
@@ -88,8 +91,16 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name="com.example.android.SaveFileActivity" />
-        <activity android:name="com.example.android.SharedPreferencesActivity"></activity>
+        <activity android:name=".SaveFileActivity" />
+        <activity android:name=".SharedPreferencesActivity" />
+
+        <provider
+            android:name=".DatabaseProvider"
+            android:authorities="com.example.databasetest.provider"
+            android:enabled="true"
+            android:exported="true">
+        </provider>
+
     </application>
 
 </manifest>

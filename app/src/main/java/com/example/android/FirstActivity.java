@@ -196,6 +196,7 @@ public class FirstActivity extends BaseActivity {
         button13.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //LitePal创建数据库
                 LitePal.getDatabase();
                 Toast.makeText(FirstActivity.this,"create success",Toast.LENGTH_SHORT).show();
             }
@@ -218,6 +219,26 @@ public class FirstActivity extends BaseActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(Intent.ACTION_DIAL);
                 intent.setData(Uri.parse("tel:10086"));
+                startActivity(intent);
+            }
+        });
+
+        Button button16 = (Button) findViewById(R.id.button16);
+        button16.setText("使用Uri获取联系人信息");
+        button16.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(FirstActivity.this,ContactsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button button17 = (Button) findViewById(R.id.button17);
+        button17.setText("使用Uri_CRUD");
+        button17.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(FirstActivity.this,DatabaseProviderActivity.class);
                 startActivity(intent);
             }
         });

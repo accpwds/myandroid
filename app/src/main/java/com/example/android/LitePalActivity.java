@@ -63,11 +63,13 @@ public class LitePalActivity extends BaseActivity {
                 } else {
                     sb.append("共有" + books.size() + "条数据\n");
                     for (Book book : books) {
+                        Log.d(TAG, "book id is " + book.getId());
                         Log.d(TAG, "book name is " + book.getName());
                         Log.d(TAG, "book author is " + book.getAuthor());
                         Log.d(TAG, "book pages is " + book.getPages());
                         Log.d(TAG, "book price is " + book.getPrice());
                         Log.d(TAG, "book press is " + book.getPress());
+                        sb.append("book id is " + book.getId() + "\n");
                         sb.append("book name is " + book.getName() + "\n");
                         sb.append("book author is " + book.getAuthor() + "\n");
                         sb.append("book pages is " + book.getPages() + "\n");
@@ -79,7 +81,7 @@ public class LitePalActivity extends BaseActivity {
 
                 //第二种查询方式
                 List<Book> bookList = DataSupport.select("name", "author", "pages").
-                        where("pages > ?", "400").order("page").limit(10).offset(10).find(Book.class);
+                        where("pages > ?", "400").order("pages").limit(10).offset(10).find(Book.class);
             }
         });
 
