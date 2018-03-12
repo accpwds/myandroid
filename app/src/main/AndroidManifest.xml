@@ -17,6 +17,10 @@
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <!-- 读取应用列表 -->
     <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <!-- 允许手机振动的权限 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- 访问SD卡权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
 
     <application
         android:name="org.litepal.LitePalApplication"
@@ -44,26 +48,19 @@
             <!-- <data android:scheme="http" /> &lt;!&ndash; 弹出选择浏览方式的形式打开 &ndash;&gt; -->
             <!-- </intent-filter> -->
         </activity>
-        <activity
-            android:name=".FruitActivity"
-            android:label="@string/linear" />
-        <activity
-            android:name=".FruitActivity2"
-            android:label="@string/linear" />
-        <activity
-            android:name=".FruitActivity3"
-            android:label="@string/staggeredgrid" />
-        <activity
-            android:name=".MsgActivtiy"
-            android:label="聊天对话框" />
-        <activity
-            android:name=".BroadCastActivity"
-            android:label="广播" />
+        <activity android:name=".FruitActivity" android:label="@string/linear" />
+        <activity android:name=".FruitActivity2" android:label="@string/linear" />
+        <activity android:name=".FruitActivity3" android:label="@string/staggeredgrid" />
+        <activity android:name=".MsgActivtiy" android:label="聊天对话框" />
+        <activity android:name=".BroadCastActivity" android:label="广播" />
         <activity android:name=".LocalBroadcastReceiver" />
         <activity android:name=".SQLiteDatabaseActivity" />
         <activity android:name=".LitePalActivity" />
         <activity android:name=".ContactsActivity" />
-        <activity android:name=".DatabaseProviderActivity"></activity>
+        <activity android:name=".DatabaseProviderActivity" />
+        <activity android:name=".SaveFileActivity" />
+        <activity android:name=".SharedPreferencesActivity" />
+        <activity android:name=".PictureActivity"></activity>
 
         <!--  -->
         <receiver
@@ -74,6 +71,8 @@
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
+
+        <!-- 系统广播接收提供器 -->
         <receiver
             android:name=".MyBroadcastReceiver"
             android:enabled="true"
@@ -82,6 +81,8 @@
                 <action android:name="com.example.test1.MY_BROADCAST" />
             </intent-filter>
         </receiver>
+
+        <!-- 自定义广播接收器 -->
         <receiver
             android:name=".AnotherBroadcastReceiver"
             android:enabled="true"
@@ -91,9 +92,7 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name=".SaveFileActivity" />
-        <activity android:name=".SharedPreferencesActivity" />
-
+        <!-- 自定义内容提供器 -->
         <provider
             android:name=".DatabaseProvider"
             android:authorities="com.example.databasetest.provider"
@@ -101,6 +100,16 @@
             android:exported="true">
         </provider>
 
+        <!-- 获取相机文件内容提供器 -->
+        <provider
+            android:authorities="com.example.cameraalbumtest.fileprovider"
+            android:name="android.support.v4.content.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths">
+
+            </meta-data>
+        </provider>
     </application>
 
 </manifest>

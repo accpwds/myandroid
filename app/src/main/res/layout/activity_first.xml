@@ -155,6 +155,20 @@
                 android:layout_height="wrap_content"
                 android:text="Button18" />
 
+            <Button
+                android:id="@+id/button19"
+                android:layout_width="fill_parent"
+                android:textAllCaps="false"
+                android:layout_height="wrap_content"
+                android:text="Button18" />
+
+            <Button
+                android:id="@+id/button20"
+                android:layout_width="fill_parent"
+                android:textAllCaps="false"
+                android:layout_height="wrap_content"
+                android:text="Button18" />
+
         </LinearLayout>
     </ScrollView>
 
