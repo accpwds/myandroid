@@ -277,6 +277,26 @@ public class FirstActivity extends BaseActivity {
                 startActivity(intent);
             }
         });
+
+        Button button20 = (Button) findViewById(R.id.button20);
+        button20.setText("播放音乐");
+        button20.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(FirstActivity.this, PlayMusicActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button button21 = (Button) findViewById(R.id.button21);
+        button21.setText("播放视频");
+        button21.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(FirstActivity.this, PlayVideoActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     //接收Intent返回结果

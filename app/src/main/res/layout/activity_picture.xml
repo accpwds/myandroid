@@ -7,19 +7,45 @@
     android:orientation="vertical"
     tools:context="com.example.android.PictureActivity">
 
-    <Button
-        android:id="@+id/take_photo"
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Take photo"
-        android:textAllCaps="false"
-        tools:layout_editor_absoluteX="79dp"
-        tools:layout_editor_absoluteY="65dp" />
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/take_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Take photo"
+            android:textAllCaps="false"
+            tools:layout_editor_absoluteX="79dp"
+            tools:layout_editor_absoluteY="65dp" />
+
+        <Button
+            android:id="@+id/choose_from_album"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose From Album"
+            android:textAllCaps="false"
+            tools:layout_editor_absoluteX="79dp"
+            tools:layout_editor_absoluteY="65dp" />
+
+    </LinearLayout>
+
 
     <ImageView
         android:id="@+id/picture"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:srcCompat="@drawable/big_image"
         android:layout_gravity="center_horizontal"
          />
+
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
 </LinearLayout>
