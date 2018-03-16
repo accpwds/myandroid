@@ -21,6 +21,8 @@
     <uses-permission android:name="android.permission.VIBRATE" />
     <!-- 访问SD卡权限 -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 访问网络权限声明 -->
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:name="org.litepal.LitePalApplication"
@@ -71,7 +73,7 @@
         <activity android:name=".SaveFileActivity" />
         <activity android:name=".SharedPreferencesActivity" />
         <activity android:name=".PictureActivity" />
-        <activity android:name=".PlayVideoActivity"></activity>
+        <activity android:name=".PlayVideoActivity" />
 
         <!--  -->
         <receiver
@@ -108,7 +110,7 @@
             android:name=".DatabaseProvider"
             android:authorities="com.example.databasetest.provider"
             android:enabled="true"
-            android:exported="true"></provider>
+            android:exported="true" />
 
         <!-- 获取相机文件内容提供器 -->
         <provider
@@ -118,10 +120,14 @@
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/file_paths"></meta-data>
+                android:resource="@xml/file_paths" />
         </provider>
 
-        <activity android:name=".PlayMusicActivity"></activity>
+        <activity android:name=".PlayMusicActivity" />
+        <activity android:name=".WebViewActivity" />
+        <activity android:name=".HttpURLConnectionActivity" />
+        <activity android:name=".OkHttpActivity" />
+        <activity android:name=".PullWithXMLActivity"></activity>
     </application>
 
 </manifest>

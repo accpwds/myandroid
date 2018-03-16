@@ -21,6 +21,8 @@ import org.litepal.LitePal;
 
 import java.io.File;
 
+import okhttp3.OkHttpClient;
+
 public class FirstActivity extends BaseActivity {
 
     private static final String TAG = "FirstActivity";
@@ -294,6 +296,46 @@ public class FirstActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(FirstActivity.this, PlayVideoActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button button22 = (Button) findViewById(R.id.button22);
+        button22.setText("使用WebView");
+        button22.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(FirstActivity.this, WebViewActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button button23 = (Button) findViewById(R.id.button23);
+        button23.setText("HttpURLConnection");
+        button23.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(FirstActivity.this, HttpURLConnectionActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button button24 = (Button) findViewById(R.id.button24);
+        button24.setText("OkHttp");
+        button24.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(FirstActivity.this, OkHttpActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button button25 = (Button) findViewById(R.id.button25);
+        button25.setText("Pull解析XML");
+        button25.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(FirstActivity.this, PullWithXMLActivity.class);
                 startActivity(intent);
             }
         });
