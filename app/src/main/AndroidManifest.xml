@@ -127,7 +127,15 @@
         <activity android:name=".WebViewActivity" />
         <activity android:name=".HttpURLConnectionActivity" />
         <activity android:name=".OkHttpActivity" />
-        <activity android:name=".PullWithXMLActivity"></activity>
+        <activity android:name=".PullWithXMLActivity" />
+        <activity android:name=".HttpUtilActivity" />
+
+        <service
+            android:name=".MyService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".ServiceActivity"></activity>
     </application>
 
 </manifest>

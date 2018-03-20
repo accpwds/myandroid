@@ -339,6 +339,26 @@ public class FirstActivity extends BaseActivity {
                 startActivity(intent);
             }
         });
+
+        Button button26 = (Button) findViewById(R.id.button26);
+        button26.setText("OkHttpRequest");
+        button26.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(FirstActivity.this, HttpUtilActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button button27 = (Button) findViewById(R.id.button27);
+        button27.setText("Service");
+        button27.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(FirstActivity.this, ServiceActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     //接收Intent返回结果

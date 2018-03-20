@@ -1,6 +1,5 @@
 package com.example.android;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -19,15 +18,18 @@ import org.xml.sax.helpers.XMLReaderFactory;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserFactory;
 
+import java.io.IOException;
 import java.io.StringReader;
 import java.net.URL;
 import java.util.List;
 
 import javax.xml.parsers.SAXParserFactory;
 
+import okhttp3.Call;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
+import com.example.android.HttpUtil;
 
 
 /**
@@ -78,6 +80,8 @@ public class PullWithXMLActivity extends BaseActivity implements View.OnClickLis
             }
         }).start();
     }
+
+
 
     /**
      * PULL方式解析XML
@@ -222,20 +226,13 @@ public class PullWithXMLActivity extends BaseActivity implements View.OnClickLis
         App app = gson.fromJson(jsonData,App.class);
         Log.d(TAG, "resultCode is " + app.getResultcode());
         Log.d(TAG, "reason is " + app.getReason());
-        Log.d(TAG, "province is " + app.);
-        Log.d(TAG, "city is " + result.getCity());
-        Log.d(TAG, "areacode is " + result.getAreacode());
-        Log.d(TAG, "zip is " + result.getZip());
-        Log.d(TAG, "company is " + result.getCompany());
-        Log.d(TAG, "card is " + result.getCard());
+        Log.d(TAG, "province is " + app.getResult().getProvince());
+        Log.d(TAG, "city is " + app.getResult().getCity());
+        Log.d(TAG, "areacode is " + app.getResult().getAreacode());
+        Log.d(TAG, "zip is " + app.getResult().getZip());
+        Log.d(TAG, "company is " + app.getResult().getCompany());
+        Log.d(TAG, "card is " + app.getResult().getCard());
         Log.d(TAG, "error_code is " + app.getError_code());
 
-        Result result = gson.fromJson(jsonData,Result.class);
-        Log.d(TAG, "province is " + result.getProvince());
-        Log.d(TAG, "city is " + result.getCity());
-        Log.d(TAG, "areacode is " + result.getAreacode());
-        Log.d(TAG, "zip is " + result.getZip());
-        Log.d(TAG, "company is " + result.getCompany());
-        Log.d(TAG, "card is " + result.getCard());
     }
 }
