@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.android.FirstActivity">
+    tools:context="com.example.android.activity.FirstActivity">
 
     <!--<include layout="@layout/title"></include>-->
     <ScrollView
@@ -294,7 +294,7 @@
         </LinearLayout>
     </ScrollView>
 
-    <com.example.android.TitleLayout
+    <com.example.android.util.TitleLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 

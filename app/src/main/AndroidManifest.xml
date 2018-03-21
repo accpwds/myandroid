@@ -33,7 +33,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".LoginActivity"
+            android:name=".activity.LoginActivity"
             android:label="@string/title_activity_login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -41,8 +41,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".FirstActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".activity.FirstActivity" />
+        <activity android:name=".activity.MainActivity">
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.VIEW" /> -->
@@ -51,33 +51,33 @@
             <!-- </intent-filter> -->
         </activity>
         <activity
-            android:name=".FruitActivity"
+            android:name=".activity.FruitActivity"
             android:label="@string/linear" />
         <activity
-            android:name=".FruitActivity2"
+            android:name=".activity.FruitActivity2"
             android:label="@string/linear" />
         <activity
-            android:name=".FruitActivity3"
+            android:name=".activity.FruitActivity3"
             android:label="@string/staggeredgrid" />
         <activity
-            android:name=".MsgActivtiy"
+            android:name=".activity.MsgActivtiy"
             android:label="聊天对话框" />
         <activity
-            android:name=".BroadCastActivity"
+            android:name=".activity.BroadCastActivity"
             android:label="广播" />
-        <activity android:name=".LocalBroadcastReceiver" />
-        <activity android:name=".SQLiteDatabaseActivity" />
-        <activity android:name=".LitePalActivity" />
-        <activity android:name=".ContactsActivity" />
-        <activity android:name=".DatabaseProviderActivity" />
-        <activity android:name=".SaveFileActivity" />
-        <activity android:name=".SharedPreferencesActivity" />
-        <activity android:name=".PictureActivity" />
-        <activity android:name=".PlayVideoActivity" />
+        <activity android:name=".receiver.LocalBroadcastReceiver" />
+        <activity android:name=".activity.SQLiteDatabaseActivity" />
+        <activity android:name=".activity.LitePalActivity" />
+        <activity android:name=".activity.ContactsActivity" />
+        <activity android:name=".activity.DatabaseProviderActivity" />
+        <activity android:name=".activity.SaveFileActivity" />
+        <activity android:name=".activity.SharedPreferencesActivity" />
+        <activity android:name=".activity.PictureActivity" />
+        <activity android:name=".activity.PlayVideoActivity" />
 
         <!--  -->
         <receiver
-            android:name=".BootCompleteReceiver"
+            android:name=".receiver.BootCompleteReceiver"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
@@ -87,7 +87,7 @@
 
         <!-- 系统广播接收提供器 -->
         <receiver
-            android:name=".MyBroadcastReceiver"
+            android:name=".receiver.MyBroadcastReceiver"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
@@ -97,7 +97,7 @@
 
         <!-- 自定义广播接收器 -->
         <receiver
-            android:name=".AnotherBroadcastReceiver"
+            android:name=".receiver.AnotherBroadcastReceiver"
             android:enabled="true"
             android:exported="true">
             <intent-filter android:priority="100">
@@ -107,7 +107,7 @@
 
         <!-- 自定义内容提供器 -->
         <provider
-            android:name=".DatabaseProvider"
+            android:name=".provider.DatabaseProvider"
             android:authorities="com.example.databasetest.provider"
             android:enabled="true"
             android:exported="true" />
@@ -123,19 +123,24 @@
                 android:resource="@xml/file_paths" />
         </provider>
 
-        <activity android:name=".PlayMusicActivity" />
-        <activity android:name=".WebViewActivity" />
-        <activity android:name=".HttpURLConnectionActivity" />
-        <activity android:name=".OkHttpActivity" />
-        <activity android:name=".PullWithXMLActivity" />
-        <activity android:name=".HttpUtilActivity" />
+        <activity android:name=".activity.PlayMusicActivity" />
+        <activity android:name=".activity.WebViewActivity" />
+        <activity android:name=".activity.HttpURLConnectionActivity" />
+        <activity android:name=".activity.OkHttpActivity" />
+        <activity android:name=".activity.PullWithXMLActivity" />
+        <activity android:name=".activity.HttpUtilActivity" />
 
         <service
-            android:name=".MyService"
+            android:name=".service.MyService"
             android:enabled="true"
             android:exported="true" />
 
-        <activity android:name=".ServiceActivity"></activity>
+        <service
+            android:name=".service.MyIntentService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".activity.ServiceActivity"></activity>
     </application>
 
 </manifest>
