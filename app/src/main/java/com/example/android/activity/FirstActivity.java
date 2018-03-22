@@ -356,6 +356,26 @@ public class FirstActivity extends BaseActivity {
                 startActivity(intent);
             }
         });
+
+        Button button28 = (Button) findViewById(R.id.button28);
+        button28.setText("Download");
+        button28.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(FirstActivity.this, DownloadAcitivty.class);
+                startActivity(intent);
+            }
+        });
+
+        Button button29 = (Button) findViewById(R.id.button29);
+        button29.setText("Material Design");
+        button29.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(FirstActivity.this, MaterialDesignActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     //接收Intent返回结果
