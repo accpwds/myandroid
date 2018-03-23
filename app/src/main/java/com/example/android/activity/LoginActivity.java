@@ -67,7 +67,7 @@ public class LoginActivity extends BaseActivity {
                         editor.clear();
                     }
                     editor.apply();
-                    Intent intent = new Intent(LoginActivity.this,FirstActivity.class);
+                    Intent intent = new Intent(LoginActivity.this,MaterialDesignActivity.class);
                     startActivity(intent);
                     Toast.makeText(LoginActivity.this,"login success!",Toast.LENGTH_SHORT).show();
                 } else {
