@@ -1,6 +1,8 @@
 package com.example.android.util;
 
+import android.content.Context;
 import android.text.TextUtils;
+import android.widget.Toast;
 
 import com.example.android.listener.HttpCallbackListener;
 
@@ -29,8 +31,14 @@ public class HttpUtil {
      * @param address
      * @param listener
      */
-    public static void sendHttpRequest(final String address,final HttpCallbackListener listener) {
-
+    public static void sendHttpRequest(final String address,
+                                       final HttpCallbackListener listener) {
+        //判断网络是否可用，不可用直接Return掉
+        if (!isNetworkAvailable()){
+            Toast.makeText(MyApplication.getContext(),
+                    "Network is Available",Toast.LENGTH_SHORT).show();
+            return;
+        }
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -51,10 +59,12 @@ public class HttpUtil {
                         respone.append(line);
                     }
                     if (listener != null){
+                        //回调onfinish方法
                         listener.onFinish(respone.toString());
                     }
                 } catch (Exception e){
                     if (listener != null){
+                        //回调onerror方法
                         listener.onError(e);
                     }
                 } finally {
@@ -64,6 +74,12 @@ public class HttpUtil {
                 }
             }
         }).start();
+    }
+
+    private static boolean isNetworkAvailable(){
+
+
+        return true;
     }
 
     public static void sendHttpRequestDoPost(final String address, final String param,final HttpCallbackListener listener) {

@@ -27,7 +27,7 @@ import java.util.List;
 import java.util.Random;
 
 
-public class MaterialDesignActivity extends AppCompatActivity {
+public class MaterialDesignActivity extends BaseActivity {
 
     //左屏滑动布局
     private DrawerLayout mDrawerLayout;
@@ -160,6 +160,7 @@ public class MaterialDesignActivity extends AppCompatActivity {
                 Toast.makeText(this,"You clicked delete",Toast.LENGTH_SHORT).show();
                 break;
             case R.id.setting:
+                //强制下线
                 Intent loginOutIntent = new Intent("com.example.test1.FORCE_OFFLINE");
                 sendBroadcast(loginOutIntent);
                 break;

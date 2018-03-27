@@ -1,10 +1,15 @@
 package com.example.android.object;
 
+import java.io.Serializable;
+
 /**
  * Created by Administrator on 2018/2/26.
+ *
+ * 传递对象 Serializable
+ *
  */
 
-public class Fruit {
+public class Fruit implements Serializable{
 
     private String name;
     private int imageId;
