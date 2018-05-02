@@ -15,7 +15,7 @@ import com.example.android.util.ActivityCollector;
 /**
  * Created by Administrator on 2018/2/25.
  *
- *  知晓当前是在哪一个活动体
+ *  知晓当前是在哪一个活动体   	KUW6UDp9oVeyj1K7eXBHXwSXROutfRMm
  */
 
 public class BaseActivity extends AppCompatActivity {
